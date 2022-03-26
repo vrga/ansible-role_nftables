@@ -12,19 +12,19 @@
   tags: nftables
 
 - name: include packages tasks
-  include: packages-{{ ansible_os_family }}.yml
+  include_tasks: packages-{{ ansible_os_family }}.yml
   tags:
     - nftables
     - nftables:packages
 
 - name: include config tasks
-  include: config.yml
+  include_tasks: config.yml
   tags:
     - nftables
     - nftables:config
 
 - name: include service tasks
-  include: service.yml
+  include_tasks: service.yml
   tags:
     - nftables
     - nftables:service
